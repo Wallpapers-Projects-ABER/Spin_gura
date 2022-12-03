@@ -1,0 +1,78 @@
+@font-face
+{ 
+font-family : customfont;
+src: url(etc/BM_hanna.ttf);
+}
+
+div
+{
+font-family: customfont;
+}
+
+.body_t
+{
+background-color : #a8c2e3;
+}
+
+.air_res
+{
+position : fixed;
+color : #635d67;
+font-weight : bold;
+white-space: nowrap;
+font-size : var(--text_size);
+top : 95%;
+z-index : 9999;
+padding: 1.5px;
+}
+
+.air_res_bar
+{
+-webkit-appearance : none;
+position : fixed;
+background : #dad4d8;
+font-weight : bold;
+white-space: nowrap;
+font-size : var(--text_size);
+top : 97%;
+z-index : 9999;
+padding : 2px;
+height : 3px;
+width : 150px;
+border-radius : 12px;
+}
+
+.air_res_bar:hover 
+{
+opacity: 1;
+}
+
+.air_res_bar::-webkit-slider-thumb 
+{
+-webkit-appearance: none;
+appearance: none;
+width: 12px;
+height: 12px;
+background: #635d67;
+cursor: pointer;
+border-radius : 12px;
+}
+
+.air_res_bar::-moz-range-thumb 
+{
+width: 12px;
+height: 12px;
+background: #635d67;
+cursor: pointer;
+border-radius : 12px;
+}
+
+.air_res_bar::-moz-range-thumb
+{
+-webkit-appearance: none;
+appearance: none;
+background : #635d67;
+width : 12px;
+height : 12px;
+cursor: pointer;
+}

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang = "ko">
+    <head></head>
+    <meta charset = "utf-8">
+    <meta name = "viewport" content = "initial-scale = 1, minimum-scale = 1">
+    
+    <link rel = "icon" href = "imgs/7.png">
+    <title>Spin gura</title>
+
+    <body id = "body_t" class = "body_t">
+        <style>
+        .body_t
+        {
+        overflow-x: hidden; /* Hide horizontal scrollbar */
+        overflow-y: hidden;
+        }
+        </style>
+        
+        
+        <img id = "obj_gura" class = "obj_gura" src = "imgs/7.png" style = "opacity : 0; width : 280px; position : absolute; top : 65%; transform-origin : center; cursor : pointer;" draggable = "false">
+        
+        <!-- air resistence -->
+        <div id = "air_res" class = "air_res">
+        Air resistence
+        </div>
+        
+        <input id = "air_res_bar" class = "air_res_bar" type="range" min="0" max="400" value="165">
+        </div>
+    </body>
+    
+    <script class = "jsbin" src = "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script class = "jsbin" src = "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+    <script src = "https://cdn.jsdelivr.net/gh/ABER1047/math_function@main/scripts.js"></script>
+    <script src = "scripts.js"></script>
+    <link rel = "stylesheet" href = "design.css">
+</html>
