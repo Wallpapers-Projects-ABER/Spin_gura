@@ -97,7 +97,7 @@ document.querySelector(".obj_gura").style.opacity = 1;
 // b_mb_pos_x = irandom_range(0,1980);
 }
 
-$(window).resize(function()
+window.addEventListener("resize", function()
 {
 var view_width = window.innerWidth;
 document.querySelector(".obj_gura").style.left = (view_width/2-140)+"px";
