@@ -31,12 +31,15 @@ window.onload = function()
 var view_width = window.innerWidth;
 document.querySelector(".obj_gura").style.left = (view_width/2-140)+"px";
 document.querySelector(".obj_gura").style.opacity = 1;
+
+document.querySelector(".air_res").style.opacity = 1;
+document.querySelector(".air_res_bar").style.opacity = 1;
 // real_n_mb_pos_x = irandom_range(0,1980);
 // b_mb_pos_x = irandom_range(0,1980);
 document.querySelector(".obj_guide").style.left = (view_width/2+40)+"px";
 
 document.querySelector(".obj_guide_cursor").style.left = (view_width/2-40)+"px";
-setTimeout(guide_mes,1000);
+setTimeout(guide_mes,500);
 }
 
 window.addEventListener("resize", function()
