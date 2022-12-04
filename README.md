@@ -1,10 +1,8 @@
-# Spin gura
-
 <div align="center">
 
 <img src = "imgs/gura.gif" width = "320px">
 
-
+# Spin gura
 
 ### 현재 개발중인 프로젝트
 
