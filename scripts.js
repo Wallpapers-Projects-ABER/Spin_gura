@@ -251,12 +251,12 @@ n_img_3d_angle += distance_from_b;
     distance_from_b = 7*sign(distance_from_b)
     }
 
-    if (n_img_3d_angle < 1)
+    if (n_img_3d_angle <= 0.5)
     {
     n_img_3d_angle = 22-n_img_3d_angle;
     }
     
-    if (n_img_3d_angle > 22)
+    if (n_img_3d_angle >= 22.5)
     {
     n_img_3d_angle = 1+(n_img_3d_angle-22);
     }
