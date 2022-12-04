@@ -21,6 +21,46 @@ air_resistence = (500-document.getElementById("air_res_bar").value)/500;
 console.log("air_resistence"+air_resistence);
 })
 
+window.onload = function()
+{
+var view_width = window.innerWidth;
+document.querySelector(".obj_gura").style.left = (view_width/2-140)+"px";
+document.querySelector(".obj_gura").style.opacity = 1;
+
+// real_n_mb_pos_x = irandom_range(0,1980);
+// b_mb_pos_x = irandom_range(0,1980);
+}
+
+
+
+window.addEventListener("resize", function()
+{
+var view_width = window.innerWidth;
+document.querySelector(".obj_gura").style.left = (view_width/2-140)+"px";
+document.querySelector(".obj_gura").style.opacity = 1;
+})
+
+
+// pressing now
+document.addEventListener("mousedown",function()
+{
+mousepressed = 1;
+b_mb_pos_x = event.clientX;
+b_mb_pos_y = event.clientY;
+console.log("B("+b_mb_pos_y+","+b_mb_pos_y+")");
+})
+
+// released
+document.addEventListener("mouseup",function()
+{
+mousepressed = 0;
+//n_mb_pos_x = event.clientX;
+//n_mb_pos_y = event.clientY;
+pertential_angle = event.clientX;
+pertential_angle_sec = event.clientX;
+//console.log("N("+n_mb_pos_x+","+n_mb_pos_y+")");
+})
+
 
 
 //step event
@@ -39,6 +79,11 @@ function step_event() //10 fps
 var distance_from_b = (b_mb_pos_x - real_n_mb_pos_x)/640;
 n_img_3d_angle += distance_from_b;
 console.log("distance_from_b (potential) : "+distance_from_b);
+
+    if (abs(distance_from_b) > 7)
+    {
+    distance_from_b = 7*sign(distance_from_b)
+    }
 
     if (n_img_3d_angle < 1)
     {
@@ -86,41 +131,3 @@ document.addEventListener("mousemove",function()
     }
 })
 
-
-window.onload = function()
-{
-var view_width = window.innerWidth;
-document.querySelector(".obj_gura").style.left = (view_width/2-140)+"px";
-document.querySelector(".obj_gura").style.opacity = 1;
-
-// real_n_mb_pos_x = irandom_range(0,1980);
-// b_mb_pos_x = irandom_range(0,1980);
-}
-
-window.addEventListener("resize", function()
-{
-var view_width = window.innerWidth;
-document.querySelector(".obj_gura").style.left = (view_width/2-140)+"px";
-document.querySelector(".obj_gura").style.opacity = 1;
-})
-
-
-// pressing now
-document.addEventListener("mousedown",function()
-{
-mousepressed = 1;
-b_mb_pos_x = event.clientX;
-b_mb_pos_y = event.clientY;
-console.log("B("+b_mb_pos_y+","+b_mb_pos_y+")");
-})
-
-// released
-document.addEventListener("mouseup",function()
-{
-mousepressed = 0;
-//n_mb_pos_x = event.clientX;
-//n_mb_pos_y = event.clientY;
-pertential_angle = event.clientX;
-pertential_angle_sec = event.clientX;
-//console.log("N("+n_mb_pos_x+","+n_mb_pos_y+")");
-})
