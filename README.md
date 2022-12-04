@@ -2,7 +2,7 @@
 
 </br></br>
   
-<img src = "imgs/gura_none_bg.gif" width = "320px"> <img src = "imgs/gura_none_bg2.gif" width = "320px">
+<img align = "center" src = "source/imgs/gura_none_bg.gif" width = "320px">
 
 # 🦈 Spin gura (스핀 구라)
 
