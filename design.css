@@ -1,7 +1,7 @@
 @font-face
 { 
 font-family : customfont;
-src: url(etc/BM_hanna.ttf);
+src: url(source/etc/BM_hanna.ttf);
 }
 
 div
@@ -11,7 +11,7 @@ font-family: customfont;
 
 .body_t
 {
-background-color : #a8c2e3;
+background-color : #a7c7e7;
 }
 
 .air_res
@@ -24,6 +24,22 @@ font-size : var(--text_size);
 top : 95%;
 z-index : 9999;
 padding: 1.5px;
+}
+
+.type_change
+{
+position : fixed;
+color : #635d67;
+font-weight : bold;
+white-space: nowrap;
+font-size : var(--text_size);
+top : 96.5%;
+left : var(--skin_change_pos);
+z-index : 9999;
+padding : 3px;
+transition : background-color 0.25s;
+padding-left : 15px;
+padding-right : 15px;
 }
 
 .guide_text
@@ -54,6 +70,7 @@ padding : 2px;
 height : 3px;
 width : 150px;
 border-radius : 12px;
+transition : background-color 0.2s;
 }
 
 .air_res_bar:hover 

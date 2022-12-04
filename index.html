@@ -4,7 +4,7 @@
     <meta charset = "utf-8">
     <meta name = "viewport" content = "initial-scale = 1, minimum-scale = 1">
     
-    <link rel = "icon" href = "imgs/7.png">
+    <link rel = "icon" href = "source/imgs/7.png">
     <title>Spin gura</title>
 
     <body id = "body_t" class = "body_t">
@@ -17,19 +17,26 @@
         </style>
         
         
-        <img id = "obj_gura" class = "obj_gura" src = "imgs/7.png" style = "opacity : 0; width : 280px; position : absolute; top : 65%; transform-origin : center; cursor : pointer;" draggable = "false">
+        <img id = "obj_gura" class = "obj_gura" src = "source/imgs/7.png" style = "opacity : 0; width : 280px; position : absolute; top : 65%; transform-origin : center; cursor : pointer;" draggable = "false">
         
-        <img id = "obj_guide" class = "obj_guide" src = "imgs/icon2.png" style = "transition : opacity 0.6s, width 0.6s; opacity : 0; width : 0px; position : absolute; top : 63%; cursor : pointer;" draggable = "false">
+        <img id = "obj_guide" class = "obj_guide" src = "source/imgs/icon2.png" style = "transition : opacity 0.6s, width 0.6s; opacity : 0; width : 0px; position : absolute; top : 63%; cursor : pointer;" draggable = "false">
         
-        <img id = "obj_guide_cursor" class = "obj_guide_cursor" src = "imgs/icon3.png" style = "transition : opacity 1s, width 0.25s, left 1.5s; opacity : 0; width : 80px; position : absolute; top : 75%;" draggable = "false">
         
-        <div id = "guide_text" class = "guide_text" style = "opacity : 0">
+        <div id = "guide_line" class = "guide_line" style = "border-radius: 6px; width : 0px; height : 5px; transition : opacity 0.2s, width 1.65s; opacity : 1; background-image : linear-gradient(to right, #ffffff00, white); position : absolute; top : 77%;" draggable = "false"></div>
+        
+        <img id = "obj_guide_cursor" class = "obj_guide_cursor" src = "source/imgs/icon3.png" style = "transition : opacity 1s, width 0.25s, left 1.5s; opacity : 0; width : 80px; position : absolute; top : 75%;" draggable = "false">
+        
+        <div id = "guide_text" class = "guide_text" style = "opacity : 0; cursor : context-menu;">
         Drag to spin
         </div>
         
         <!-- air resistence -->
-        <div id = "air_res" class = "air_res" style = "opacity : 0">
+        <div id = "air_res" class = "air_res" style = "opacity : 0; cursor : context-menu;">
         Resistence
+        </div>
+        
+        <div id = "type_change" class = "type_change" style = "opacity : 0; cursor : pointer;">
+        Type
         </div>
         
         <input id = "air_res_bar" class = "air_res_bar" type="range" min="0" max="400" value="165" style = "opacity : 0">
