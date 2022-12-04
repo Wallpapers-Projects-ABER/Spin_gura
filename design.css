@@ -34,7 +34,7 @@ font-weight : bold;
 white-space: nowrap;
 font-size : var(--text_size);
 top : 73%;
-left : 54%;
+left : 0%;
 z-index : 9999;
 padding: 1.5px;
 transition : opacity 1s, left 1.5s;
