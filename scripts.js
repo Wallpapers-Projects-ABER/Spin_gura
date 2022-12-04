@@ -39,7 +39,7 @@ document.querySelector(".air_res_bar").style.opacity = 1;
 document.querySelector(".obj_guide").style.left = (view_width/2+40)+"px";
 
 document.querySelector(".obj_guide_cursor").style.left = (view_width/2-40)+"px";
-setTimeout(guide_mes,500);
+guide_mes();
 }
 
 window.addEventListener("resize", function()
