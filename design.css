@@ -26,6 +26,20 @@ z-index : 9999;
 padding: 1.5px;
 }
 
+.guide_text
+{
+position : absolute;
+color : #635d67;
+font-weight : bold;
+white-space: nowrap;
+font-size : var(--text_size);
+top : 73%;
+left : 54%;
+z-index : 9999;
+padding: 1.5px;
+transition : opacity 1s, left 1.5s;
+}
+
 .air_res_bar
 {
 -webkit-appearance : none;
