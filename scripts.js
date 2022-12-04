@@ -169,20 +169,6 @@ b_mb_pos_y = event.clientY;
 real_n_mb_pos_x = event.clientX;
 real_n_mb_pos_y = event.clientY;
 
-
-
-do_not_show_guide = 1;
-
-document.querySelector(".obj_guide").style.width = 0+"px";
-document.querySelector(".obj_guide").style.opacity = 0;
-
-document.querySelector(".obj_guide_cursor").style.transition = "opacity 0s";
-document.querySelector(".obj_guide_cursor").style.opacity = 0;
-
-document.querySelector(".guide_text").style.transition = "opacity 0s";
-document.querySelector(".guide_text").style.opacity = 0;
-
-
 console.log("B("+b_mb_pos_x+","+b_mb_pos_y+")");
 })
 
@@ -241,6 +227,17 @@ function step_event() //10 fps
     pertential_angle_sec += (real_n_mb_pos_x - pertential_angle_sec)*(air_resistence/25);
     pertential_angle += (pertential_angle_sec - pertential_angle)*(air_resistence/25);
     b_mb_pos_x += (pertential_angle - b_mb_pos_x)*(air_resistence/25);
+    
+    do_not_show_guide = 1;
+
+    document.querySelector(".obj_guide").style.width = 0+"px";
+    document.querySelector(".obj_guide").style.opacity = 0;
+
+    document.querySelector(".obj_guide_cursor").style.transition = "opacity 0s";
+    document.querySelector(".obj_guide_cursor").style.opacity = 0;
+
+    document.querySelector(".guide_text").style.transition = "opacity 0s";
+    document.querySelector(".guide_text").style.opacity = 0;
     }
 
 
