@@ -190,7 +190,7 @@ document.addEventListener("mousemove",function()
     }
     
     n_img_3d_angle += distance_from_b;
-    console.log("distance_from_b : "+distance_from_b);
+    //console.log("distance_from_b : "+distance_from_b);
 
         if (n_img_3d_angle < 1)
         {
@@ -236,7 +236,7 @@ function step_event() //10 fps
 
 var distance_from_b = (b_mb_pos_x - real_n_mb_pos_x)/640;
 n_img_3d_angle += distance_from_b;
-console.log("distance_from_b (potential) : "+distance_from_b);
+//console.log("distance_from_b (potential) : "+distance_from_b);
 
     if (abs(distance_from_b) > 7)
     {
