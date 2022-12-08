@@ -41,6 +41,7 @@ var loading_now = 1;
 var loading_time = 8000;
 
 var check_imgs_loaded = 0;
+var imgs_obj = [];
 
 
 //instance
@@ -59,38 +60,16 @@ var ins_resistence_value_text = document.querySelector(".resistence_value_text")
 
 
 
-//checking images are loaded
-$(document).ready(function() 
-{
-// Images loaded is zero because we're going to process a new set of images.
-var imagesLoaded = 0;
-// Total images is still the total number of <img> elements on the page.
-var totalImages = $("img").length;
 
-    // Step through each image in the DOM, clone it, attach an onload event
-    // listener, then set its source to the source of the original image. When
-    // that new image has loaded, fire the imageLoaded() callback.
-    $("img").each(function (idx, img) 
-    {
-    $("<img>").on("load", imageLoaded).attr("src", $(img).attr("src"));
-    });
-
-    // Do exactly as we had before -- increment the loaded count and if all are
-    // loaded, call the allImagesLoaded() function.
-    function imageLoaded()
-    {
-    imagesLoaded++;
-        if (imagesLoaded == totalImages) 
-        {
-        check_imgs_loaded = 1;
-        }
-    }
-});
 
 
 function loading_imgs()
 {
 loading_time -= 7000*check_imgs_loaded;
+    for(var i = 1; i <= 44; i++)
+    {
+    imgs_obj[i].remove();
+    }
 setTimeout(loading_anime,loading_time);
 }
 
@@ -98,6 +77,25 @@ setTimeout(loading_anime,loading_time);
 //setting for first
 window.onload = function()
 {
+    for(var i = 1; i <= 22; i++)
+    {
+    imgs_obj[i] = document.createElement("img");
+    imgs_obj[i].src = "source/imgs/"+i+".png";
+    imgs_obj[i].style.width = 0;
+    imgs_obj[i].style.position = "absolute";
+    imgs_obj[i].style.opacity = "0";
+    imgs_obj[i].draggable = false;
+    $("input").after(imgs_obj[i]);
+    
+    imgs_obj[i+22] = document.createElement("img");
+    imgs_obj[i+22].src = "source/imgs/B_"+i+".png";
+    imgs_obj[i+22].style.width = 0;
+    imgs_obj[i+22].style.position = "absolute";
+    imgs_obj[i+22].style.opacity = "0";
+    imgs_obj[i+22].draggable = false;
+    $("input").after(imgs_obj[i]);
+    }
+
 ins_obj_gura.style.left = (view_width/2-140)+"px";
 ins_obj_gura.style.opacity = 1;
 
@@ -135,6 +133,35 @@ ins_obj_guide.style.left = (view_width/2+40)+"px";
 })
 
 
+
+
+//checking images are loaded
+$(document).ready(function() 
+{
+// Images loaded is zero because we're going to process a new set of images.
+var imagesLoaded = 0;
+// Total images is still the total number of <img> elements on the page.
+var totalImages = $("img").length;
+
+    // Step through each image in the DOM, clone it, attach an onload event
+    // listener, then set its source to the source of the original image. When
+    // that new image has loaded, fire the imageLoaded() callback.
+    $("img").each(function (idx, img) 
+    {
+    $("<img>").on("load", imageLoaded).attr("src", $(img).attr("src"));
+    });
+
+    // Do exactly as we had before -- increment the loaded count and if all are
+    // loaded, call the allImagesLoaded() function.
+    function imageLoaded()
+    {
+    imagesLoaded++;
+        if (imagesLoaded == totalImages) 
+        {
+        check_imgs_loaded = 1;
+        }
+    }
+});
 
 
 
