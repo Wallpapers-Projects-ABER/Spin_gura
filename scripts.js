@@ -71,7 +71,7 @@ loading_time -= 7000*check_imgs_loaded;
     imgs_obj[i].remove();
     }
 setTimeout(loading_anime,loading_time);
-setTimeout(guide_mes,loading_time+1000);
+setTimeout(guide_mes,loading_time+500);
 }
 
 
