@@ -4,10 +4,11 @@ font-family : customfont;
 src: url(source/etc/BM_hanna.ttf);
 }
 
-div
+body
 {
 font-family: customfont;
 }
+
 
 .body_t
 {
@@ -26,6 +27,19 @@ z-index : 9999;
 padding: 1.5px;
 }
 
+.resistence_value_text
+{
+position : fixed;
+color : #635d67;
+font-weight : bold;
+white-space: nowrap;
+font-size : var(--text_size);
+top : 92%;
+z-index : 9999;
+padding: 1.5px;
+width : 40px;
+}
+
 .type_change
 {
 position : fixed;
@@ -34,6 +48,22 @@ font-weight : bold;
 white-space: nowrap;
 font-size : var(--text_size);
 top : 96.5%;
+left : var(--skin_change_pos);
+z-index : 9999;
+padding : 3px;
+transition : background-color 0.25s;
+padding-left : 15px;
+padding-right : 15px;
+}
+
+.github_link
+{
+position : fixed;
+color : #635d67;
+font-weight : bold;
+white-space: nowrap;
+font-size : var(--text_size);
+top : 93.8%;
 left : var(--skin_change_pos);
 z-index : 9999;
 padding : 3px;
@@ -106,4 +136,15 @@ background : #635d67;
 width : 12px;
 height : 12px;
 cursor: pointer;
+}
+
+
+.loading_gif
+{
+left : var(--loading_gif_pos_x);
+top : var(--loading_gif_pos_y);
+width : var(--loading_gif_scale);
+box-shadow: none;
+outline: none;
+-webkit-tap-highlight-color: transparent;
 }

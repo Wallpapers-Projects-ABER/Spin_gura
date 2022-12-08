@@ -13,11 +13,14 @@
         {
         overflow-x: hidden; /* Hide horizontal scrollbar */
         overflow-y: hidden;
+        outline: none;
+        color: transparent;
+        text-decoration: none;
         }
         </style>
         
         
-        <img id = "obj_gura" class = "obj_gura" src = "source/imgs/7.png" style = "opacity : 0; width : 280px; position : absolute; top : 65%; transform-origin : center; cursor : pointer;" draggable = "false">
+        <img id = "obj_gura" class = "obj_gura" src = "source/imgs/7.png" style = "opacity : 0; width : 280px; position : absolute; top : 65%; transform-origin : center; box-shadow: none; outline: none;" draggable = "false">
         
         <img id = "obj_guide" class = "obj_guide" src = "source/imgs/icon2.png" style = "transition : opacity 0.6s, width 0.6s; opacity : 0; width : 0px; position : absolute; top : 63%; cursor : pointer;" draggable = "false">
         
@@ -30,17 +33,26 @@
         Drag to spin
         </div>
         
+        <input type = "text" id = "resistence_value_text" class = "resistence_value_text" value = "" style = "opacity : 0; cursor : context-menu; z-index : 990;">
+        
         <!-- air resistence -->
-        <div id = "air_res" class = "air_res" style = "opacity : 0; cursor : context-menu;">
+        <div id = "air_res" class = "air_res" style = "opacity : 0; cursor : context-menu; z-index : 990;">
         Resistence
         </div>
         
-        <div id = "type_change" class = "type_change" style = "opacity : 0; cursor : pointer;">
-        Type
+        <div id = "type_change" class = "type_change" style = "opacity : 0; cursor : pointer; z-index : 990;">
+        Skin
         </div>
         
-        <input id = "air_res_bar" class = "air_res_bar" type="range" min="0" max="400" value="165" style = "opacity : 0">
+        <a id = "github_link" class = "github_link" style = "opacity : 0; cursor : pointer; z-index : 990; text-decoration : none;" href = "https://github.com/ABER1047/Spin_gura">
+        Github
+        </a>
+        
+        <input id = "air_res_bar" class = "air_res_bar" type="range" min="0" max="400" value="165" style = "opacity : 0; z-index : 990;">
         </div>
+        
+        <div id = "loading_bg" class = "loading_bg" style = "transition : opacity 1s; background-color : white; left : -128px; top : -128px; width : 3200px; height : 3200px; position : fixed; z-index : 999;"></div>
+        <img id = "loading_gif" class = "loading_gif" src = "source/imgs/loading.gif" style = "transition : opacity 0.2s; position : fixed; z-index : 1000;" draggable = "false" loading = "eager" preload = "auto">
     </body>
     
 
