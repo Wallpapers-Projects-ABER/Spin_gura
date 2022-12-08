@@ -60,7 +60,29 @@ var ins_resistence_value_text = document.querySelector(".resistence_value_text")
 
 
 
-
+Promise.all(Array.from(document.images).map(img => 
+{
+    if (img.complete)
+    {
+    return Promise.resolve(img.naturalHeight !== 0);
+    }
+    
+    return new Promise(resolve => 
+    {
+    img.addEventListener('load', () => resolve(true));
+    img.addEventListener('error', () => resolve(false));
+    });
+    })).then(results => 
+    {
+    if (results.every(res => res))
+    {
+    check_imgs_loaded = 1;
+    }
+    else
+    {
+    check_imgs_loaded = 0;
+    }
+});
 
 
 
@@ -71,7 +93,6 @@ ins_obj_gura.style.left = (view_width/2-140)+"px";
 ins_obj_gura.style.opacity = 1;
 
 //loading
-check_imgs_loaded = document.querySelector("img").complete;
 loading_time -= 7000*check_imgs_loaded;
 console.log("loading_time");
 setTimeout(loading_anime,loading_time);
