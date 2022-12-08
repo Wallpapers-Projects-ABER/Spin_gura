@@ -83,14 +83,9 @@ document.querySelector("img").addEventListener("load", function()
 images_loaded++;
     if (images_loaded == total_images) 
     {
-    allImagesLoaded();
+    check_imgs_loaded = 1;
     }
 });
-
-function allImagesLoaded() 
-{
-check_imgs_loaded = 1;
-}
 
 
 //loading
