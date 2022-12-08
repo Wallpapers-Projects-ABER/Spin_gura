@@ -60,29 +60,8 @@ var ins_resistence_value_text = document.querySelector(".resistence_value_text")
 
 
 
-Promise.all(Array.from(document.images).map(img => 
-{
-    if (img.complete)
-    {
-    return Promise.resolve(img.naturalHeight !== 0);
-    }
-    
-    return new Promise(resolve => 
-    {
-    img.addEventListener('load', () => resolve(true));
-    img.addEventListener('error', () => resolve(false));
-    });
-    })).then(results => 
-    {
-    if (results.every(res => res))
-    {
-    check_imgs_loaded = 1;
-    }
-    else
-    {
-    check_imgs_loaded = 0;
-    }
-});
+
+
 
 
 
@@ -91,6 +70,28 @@ window.onload = function()
 {
 ins_obj_gura.style.left = (view_width/2-140)+"px";
 ins_obj_gura.style.opacity = 1;
+
+// When we begin, assume no images are loaded.
+var images_loaded = 0;
+// Count the total number of images on the page when the page has loaded.
+var total_images = document.querySelector("img").length;
+
+// After an image is loaded, add to the count, and if that count equals the
+// total number of images, fire the allImagesLoaded() function.
+document.querySelector("img").addEventListener("load", function() 
+{
+images_loaded++;
+    if (images_loaded == total_images) 
+    {
+    allImagesLoaded();
+    }
+});
+
+function allImagesLoaded() 
+{
+check_imgs_loaded = 1;
+}
+
 
 //loading
 loading_time -= 7000*check_imgs_loaded;
