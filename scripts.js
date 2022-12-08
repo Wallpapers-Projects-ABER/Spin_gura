@@ -71,6 +71,7 @@ loading_time -= 7000*check_imgs_loaded;
     imgs_obj[i].remove();
     }
 setTimeout(loading_anime,loading_time);
+setTimeout(guide_mes,loading_time+1000);
 }
 
 
@@ -115,8 +116,6 @@ ins_github_link.style.opacity = 1;
 // real_n_mb_pos_x = irandom_range(0,1980);
 // b_mb_pos_x = irandom_range(0,1980);
 ins_obj_guide.style.left = (view_width/2+40)+"px";
-
-setTimeout(guide_mes,loading_time+1000);
 }
 
 window.addEventListener("resize", function()
