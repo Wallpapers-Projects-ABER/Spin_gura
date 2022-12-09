@@ -17,8 +17,6 @@ https://aber1047.github.io/Spin_gura/
 
 마우스를 이용해 구라를 돌릴 수 있음
 
-대부분의 기능은 Javascript로 제작되었음
-
 </br>
 
 #
