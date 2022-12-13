@@ -575,3 +575,34 @@ document.documentElement.style.setProperty("--loading_gif_pos_x",view_width*0.5-
 document.documentElement.style.setProperty("--loading_gif_pos_y",view_height*0.5-loading_img_w_scale*179+"px");
 document.documentElement.style.setProperty("--loading_gif_scale",loading_img_w_scale*500+"px");
 
+
+
+
+
+
+
+//wallpaper engine
+window.wallpaperPropertyListener = 
+{
+    applyUserProperties: function(properties)
+    {
+        if (properties.customslider)
+        {
+        var mySliderValue = properties.customslider.value;
+        air_resistence = mySliderValue;
+        //console.log("air_resistence"+air_resistence);
+        
+            if (air_resistence == 0.2)
+            {
+            air_resistence = 0;
+            }
+        }
+        
+        if (properties.customcheckbox) 
+        {
+        var mySliderValue = properties.customcheckbox.value;
+        skin_type = mySliderValue;
+        skin_change_apply();
+        }
+    },
+};
