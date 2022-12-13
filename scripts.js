@@ -416,7 +416,7 @@ setting_now = 0;
 //pressing now (global mouse button)
 document.addEventListener("mousedown",function()
 {
-    if (setting_now == 0 && loading_now == 0)
+    if (setting_now == 0 && loading_now == 0 && abs(event.clientX) < view_width)
     {
     mousepressed = 1;
     b_mb_pos_x = event.clientX;
