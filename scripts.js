@@ -449,27 +449,38 @@ document.addEventListener("mousemove",function()
     {
     real_n_mb_pos_x = event.clientX;
     real_n_mb_pos_y = event.clientY;
-    var distance_from_b = (b_mb_pos_x - real_n_mb_pos_x)/spin_speed;
+    var real_distance_without_abs = (b_mb_pos_x - real_n_mb_pos_x);
     
-    if (abs(distance_from_b) > 7)
-    {
-    distance_from_b = 7*sign(distance_from_b)
-    }
-    
-    n_img_3d_angle += distance_from_b;
-    //console.log("distance_from_b : "+distance_from_b);
-
-        if (n_img_3d_angle < 1)
+        if (abs(real_distance_without_abs) < view_width*0.5)
         {
-        n_img_3d_angle = 22-n_img_3d_angle;
+        var distance_from_b = real_distance_without_abs/spin_speed;
+        
+        if (abs(distance_from_b) > 7)
+        {
+        distance_from_b = 7*sign(distance_from_b)
         }
         
-        if (n_img_3d_angle > 22)
-        {
-        n_img_3d_angle = 1+(n_img_3d_angle-22);
-        }
+        n_img_3d_angle += distance_from_b;
+        //console.log("distance_from_b : "+distance_from_b);
 
-    ins_obj_gura.src = "source/imgs/"+real_skin_type+round(n_img_3d_angle)+".png";
+            if (n_img_3d_angle < 1)
+            {
+            n_img_3d_angle = 22-n_img_3d_angle;
+            }
+            
+            if (n_img_3d_angle > 22)
+            {
+            n_img_3d_angle = 1+(n_img_3d_angle-22);
+            }
+
+        ins_obj_gura.src = "source/imgs/"+real_skin_type+round(n_img_3d_angle)+".png";
+        }
+        else
+        {
+        mousepressed = 0;
+        pertential_angle = event.clientX;
+        pertential_angle_sec = event.clientX;
+        }
     }
 })
 
