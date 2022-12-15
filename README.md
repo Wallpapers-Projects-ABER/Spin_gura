@@ -31,7 +31,7 @@ https://aber1047.github.io/Spin_gura/
 
 </br>
 
-(추가 예정)
+https://steamcommunity.com/sharedfiles/filedetails/?id=2901438967
 
 </br>
 
