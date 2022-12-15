@@ -12,7 +12,7 @@ font-family: customfont;
 
 .body_t
 {
-background-color : #a7c7e7;
+background-color : #99bcdf;
 }
 
 .air_res
@@ -22,7 +22,7 @@ color : #635d67;
 font-weight : bold;
 white-space: nowrap;
 font-size : var(--text_size);
-top : 95%;
+top : 96%;
 z-index : 9999;
 padding: 1.5px;
 }
@@ -34,7 +34,7 @@ color : #635d67;
 font-weight : bold;
 white-space: nowrap;
 font-size : var(--text_size);
-top : 92%;
+top : 93%;
 z-index : 9999;
 padding: 1.5px;
 width : 40px;
@@ -47,7 +47,7 @@ color : #635d67;
 font-weight : bold;
 white-space: nowrap;
 font-size : var(--text_size);
-top : 96.5%;
+top : 93.8%;
 left : var(--skin_change_pos);
 z-index : 9999;
 padding : 3px;
@@ -63,7 +63,7 @@ color : #635d67;
 font-weight : bold;
 white-space: nowrap;
 font-size : var(--text_size);
-top : 93.8%;
+top : 96.5%;
 left : var(--skin_change_pos);
 z-index : 9999;
 padding : 3px;
@@ -94,7 +94,7 @@ background : #dad4d8;
 font-weight : bold;
 white-space: nowrap;
 font-size : var(--text_size);
-top : 97%;
+top : 98%;
 z-index : 9999;
 padding : 2px;
 height : 3px;

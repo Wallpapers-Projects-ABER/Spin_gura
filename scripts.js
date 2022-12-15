@@ -428,23 +428,17 @@ document.addEventListener("mousedown",function()
     }
 })
 
-//released (global mouse button)
-document.addEventListener("mouseup",function()
-{
-    if (setting_now == 0 && loading_now == 0)
-    {
-    mousepressed = 0;
-    pertential_angle = event.clientX;
-    pertential_angle_sec = event.clientX;
-    //n_mb_pos_x = event.clientX;
-    //n_mb_pos_y = event.clientY;
-    console.log("N("+real_n_mb_pos_x+","+real_n_mb_pos_y+")");
-    }
-})
 
 //dragging (global mouse button)
 document.addEventListener("mousemove",function()
 {
+    if (abs(event.clientX) > view_width)
+    {
+    mousepressed = 0;
+    pertential_angle = event.clientX;
+    pertential_angle_sec = event.clientX;
+    }
+
     if (setting_now == 0 && loading_now == 0 && mousepressed == 1)
     {
     real_n_mb_pos_x = event.clientX;
@@ -483,6 +477,23 @@ document.addEventListener("mousemove",function()
         }
     }
 })
+
+
+//released (global mouse button)
+document.addEventListener("mouseup",function()
+{
+    if (setting_now == 0 && loading_now == 0)
+    {
+    mousepressed = 0;
+    pertential_angle = event.clientX;
+    pertential_angle_sec = event.clientX;
+    //n_mb_pos_x = event.clientX;
+    //n_mb_pos_y = event.clientY;
+    console.log("N("+real_n_mb_pos_x+","+real_n_mb_pos_y+")");
+    }
+})
+
+
 
 
 
@@ -582,27 +593,27 @@ document.documentElement.style.setProperty("--loading_gif_scale",loading_img_w_s
 
 
 //wallpaper engine
-window.wallpaperPropertyListener = 
-{
-    applyUserProperties: function(properties)
-    {
-        if (properties.customslider)
-        {
-        var mySliderValue = properties.customslider.value;
-        air_resistence = mySliderValue;
-        //console.log("air_resistence"+air_resistence);
+// window.wallpaperPropertyListener = 
+// {
+//     applyUserProperties: function(properties)
+//     {
+//         if (properties.resistance__)
+//         {
+//         var mySliderValue = properties.resistance__.value;
+//         air_resistence = mySliderValue;
+//         //console.log("air_resistence"+air_resistence);
         
-            if (air_resistence == 0.2)
-            {
-            air_resistence = 0;
-            }
-        }
+//             if (air_resistence == 0.2)
+//             {
+//             air_resistence = 0;
+//             }
+//         }
         
-        if (properties.customcheckbox) 
-        {
-        var mySliderValue = properties.customcheckbox.value;
-        skin_type = mySliderValue;
-        skin_change_apply();
-        }
-    },
-};
+//         if (properties.type__) 
+//         {
+//         var mySliderValue = properties.type__.value;
+//         skin_type = mySliderValue;
+//         skin_change_apply();
+//         }
+//     },
+// };
