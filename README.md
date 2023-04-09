@@ -13,8 +13,6 @@ https://aber1047.github.io/Spin_gura/
 </br>
 
 
-### 현재 개발중인 프로젝트
-
 마우스를 이용해 구라를 돌릴 수 있음
 
 </br>
